@@ -22,7 +22,9 @@ app.use('/api/bills', require('./routes/bill'));
 app.use('/api/payments', require('./routes/payment'));
 app.use('/api/housekeeping', require('./routes/housekeeping'));
 app.use('/api/maintenance', require('./routes/maintenance'));
-
+app.get('/', (req, res) => {
+  res.send('Hotel Management API is running ');
+});
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
